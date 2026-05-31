@@ -1,0 +1,29 @@
+[project]
+name = "kapso-hermes-bridge"
+version = "0.1.0"
+description = "Kapso WhatsApp webhook bridge to Hermes API server"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.115.0,<1",
+    "uvicorn[standard]>=0.32.0,<1",
+    "httpx>=0.28.1,<1",
+    "python-dotenv>=1.0.0,<2",
+]
+
+[project.optional-dependencies]
+redis = ["redis>=5.0.0,<6"]
+
+[project.scripts]
+kapso-hermes-bridge = "kapso_hermes_bridge.main:main"
+
+[build-system]
+requires = ["hatchling>=1.24.0,<2"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["kapso_hermes_bridge"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
