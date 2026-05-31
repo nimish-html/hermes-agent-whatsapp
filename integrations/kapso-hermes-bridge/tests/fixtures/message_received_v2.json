@@ -1,0 +1,24 @@
+{
+  "message": {
+    "id": "wamid.test123",
+    "timestamp": "1730092800",
+    "type": "text",
+    "from": "16315551181",
+    "text": { "body": "Hello from Kapso" },
+    "kapso": {
+      "direction": "inbound",
+      "status": "received",
+      "processing_status": "pending",
+      "origin": "cloud_api",
+      "has_media": false,
+      "content": "Hello from Kapso"
+    }
+  },
+  "conversation": {
+    "id": "conv_123",
+    "phone_number": "16315551181",
+    "status": "active"
+  },
+  "is_new_conversation": true,
+  "phone_number_id": "123456789012345"
+}
